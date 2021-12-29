@@ -1,0 +1,381 @@
+
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(red, #FF526C);
+  }
+
+  .container {
+    height: 550px;
+    width: 550px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 8px lightgray;
+    border-radius: 10px;
+    background: #fafffd;
+  }
+  .container .top {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .bottom {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .top img {
+    max-height: 50%;
+    max-width: 50%;
+  }
+
+  .pass {
+    outline: none;
+    min-height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 60%;
+    background: #eee;
+    border: none;
+    margin-bottom: 15px;
+    
+  }
+  .user {
+    outline: none;
+    min-height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 60%;
+    background: #eee;
+    border: none;
+    margin-bottom:10px;
+    border-bottom: red;
+    
+  }
+  .user:focus, .pass:focus {
+    border-bottom: solid 1.5px red;
+  }
+  .submit {
+    outline: none;
+    border: 2px solid red;
+    padding: 10px;
+    width: 60%;
+    background: none;
+    color: red;
+    font-weight: bold;
+    box-shadow: 0 0 8px lightgray;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  
+  .error {
+    padding: 7.5px;
+    border: solid 1.5px red;
+    border-radius: 0 6px 0 6px;
+    color: red;
+    font-style: italic;
+    width: 60%;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    display:  none;
+  }
+
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+  .admin {
+    height: 100vh;
+    width: 100vw;
+    background: #eee;
+    display: none;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .nav {
+    width: 100%;
+    height: 50px;
+    background: white;
+    align-items: center;
+    padding: 15px;
+    background: #e3eeff;
+  }
+  
+  .body {
+    height: calc(100% - 150px);
+    width: 100%;
+    display: flex;
+    background: white;
+  }
+  .body .left {
+    height: calc(100% - 100px);
+    width: 100%;
+    padding: 10px;
+    overflow: scroll;
+  }
+  .body .right {
+    height: calc(100% + 15px);
+    width: 40%;
+    overflow: scroll;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+
+
+
+
+
+  .box {
+    width: 85%;
+    min-height: 100px;
+    box-shadow: 0 0 8px lightgray;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .box .top {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .box .bottom {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+
+  .mess {
+    width: 65%;
+    min-height: 100px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    border-bottom: solid 1px lightgray;
+    
+  }
+  .mess .top {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    font-weight: bold;
+  }
+  .mess .bottom {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+
+
+  
+  @media screen and (max-width: 550px) {
+    .container {
+      height: 100vh;
+      width: 100vw;
+      border-radius: 0;
+      margin: 0;
+    }
+    .user, .pass, .submit {
+      width: 85%;
+    }
+    .container .top img {
+      max-height: 75%;
+      max-width: 75%;
+    }
+    .container .top {
+      height: 25%;
+    }
+  }
+
+</style>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/fd1595971c.js" crossorigin="anonymous"></script>
+  <script src= "/socket.io/socket.io.js"></script>
+  <title>Admin - Liban Alasow</title>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <img src="https://s.libanalasow.repl.co/icon.png">
+      
+    </div>
+    <form class="bottom">
+      <p style="text-align: center; font-weight: normal; font-size: 15px;">Please verify that you are an admin!</p>
+      <p style="text-align: center; font-weight: bold; font-size: 18px;">Admin Login</p>
+      <p class="error">Wrong password entered</p>
+      <input type="text" class="user" placeholder="Username">
+      <input type="password" class="pass" placeholder="Password">
+      <input type="submit" value="Login" class="submit">
+    </form>
+  </div>
+  <section class="admin">
+    <div class="nav">
+        <p style="font-weight: bold; font-size: 22px;">Admin</p>
+    </div>
+    <div class="body">
+      <div class="left">
+        <p style="margin: 25px;">Latest Jobs</p>
+        <% for (let i =0; i < data["static-websites"].length; i++) {%>
+          <%let id = data["static-websites"][i].id%>
+          <div class="mess" id="<%=id%>">
+            <div class="top">
+              <p><%=data["static-websites"][i].fullname%> needs a Static-website</p>
+              <p class="close_mess(<%=id%>)" onclick="del_mess1('<%=id%>')" style="margin: 10px; cursor: pointer;"><i class="fas fa-times"></i></p>
+            </div>
+            <div style="font-style: italic" class="bottom">
+              <p style="color: red; font-size: 13px"><%=data["static-websites"][i].email%></p>
+              <%=data["static-websites"][i].desc%>
+            </div>
+          </div>
+        <% }%>
+        <% for (let i =0; i < data["dynamic-websites"].length; i++) {%>
+          <%let id = data["dynamic-websites"][i].id%>
+          <div class="mess" id="<%=id%>">
+            <div class="top">
+              <p><%=data["dynamic-websites"][i].fullname%> needs a dynamic-website</p>
+              <p class="close_mess(<%=id%>)" onclick="del_mess2('<%=id%>')" style="margin: 10px; cursor: pointer;"><i class="fas fa-times"></i></p>
+            </div>
+            <div style="font-style: italic" class="bottom">
+              <p style="color: red; font-size: 13px"><%=data["dynamic-websites"][i].email%></p>
+              <%=data["dynamic-websites"][i].desc%>
+            </div>
+          </div>
+        <% }%>
+        <% for (let i =0; i < data["custom-bots"].length; i++) {%>
+          <%let id = data["custom-bots"][i].id%>
+          <div class="mess" id="<%=id%>">
+            <div class="top">
+              <p><%=data["custom-bots"][i].fullname%> needs a custom bot</p>
+              <p class="close_mess3(<%=id%>)" onclick="del_mess3('<%=id%>')" style="margin: 10px; cursor: pointer;"><i class="fas fa-times"></i></p>
+            </div>
+            <div style="font-style: italic" class="bottom">
+              <p style="color: red; font-size: 13px"><%=data["custom-bots"][i].email%></p>
+              <%=data["custom-bots"][i].desc%>
+            </div>
+          </div>
+        <% }%>
+      </div>
+      <div class="right">
+        <% for (let i =0; i < data.contacts.length; i++) {%>
+          <%let id = data.contacts[i].id%>
+          <div class="box" id="<%=id%>">
+            <div class="top">
+              <p><%=data.contacts[i].author%></p>
+              <p class="close_box" onclick="del('<%=id%>')" style="margin: 10px; cursor: pointer;"><i class="fas fa-times"></i></p>
+            </div>
+            <div class="bottom">
+              <%=data.contacts[i].message%>
+            </div>
+          </div>
+        <% }%>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+
+
+
+var socket = io();
+
+
+function grantLogin(user) {
+  document.querySelector("body").style.background = "white"
+  document.querySelector(".admin").style.display = "block"
+  document.querySelector(".container").style.display = "none"
+  document.querySelector(".welcomer").innerHTML = `Welcome back, ${user.displayName}!`
+}
+
+
+
+
+document.querySelector(".bottom").addEventListener("submit", (e) => {
+  e.preventDefault();
+  var username = document.querySelector(".user")
+  var password = document.querySelector(".pass")
+  var error = document.querySelector(".error")
+  error.style.display = "none"
+  
+  if (username.value == "") {
+    error.innerHTML = `<i class="fas fa-exclamation-circle"></i> Please enter your username`;
+    error.style.display = "block"
+    return
+  }
+  if (password.value == "") {
+    error.innerHTML = `<i class="fas fa-exclamation-circle"></i> Please enter your password`;
+    error.style.display = "block"
+    return
+  }
+  socket.emit("login-request", username.value, password.value)
+  username.value = ""
+  password.value = ""
+})
+
+socket.on("login", (resault, user) => {
+  if (resault == "succeed") {
+    grantLogin(user)
+  } else {
+    var error = document.querySelector(".error")
+    error.style.display = "block"
+    error.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${resault}`
+  }
+})
+
+
+function del(id) {
+  socket.emit("remove", id)
+  document.getElementById(id).remove()
+}
+
+function del_mess1(id) {
+  socket.emit("remove_mess1", id)
+  document.getElementById(id).remove()
+}
+function del_mess2(id) {
+  socket.emit("remove_mess2", id)
+  document.getElementById(id).remove()
+}
+function del_mess3(id) {
+  socket.emit("remove_mess3", id)
+  document.getElementById(id).remove()
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
