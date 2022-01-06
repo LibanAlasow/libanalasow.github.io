@@ -234,6 +234,24 @@ a:hover {
   border: 1px rgb(156, 156, 156) solid;
 }
 
+.ro-account {
+  padding: 15px;
+  color: red;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 50px;
+  font-size: 14px;
+  border: solid 1px red;
+  transition: .3s;
+  font-family: "poppins", sans-serif;
+}
+
+.ro-account:hover {
+  background: red;
+  color: white;
+  border: none;
+}
+
 @media screen and (max-width: 650px){
   body {
     overflow-x: hidden;
@@ -247,6 +265,9 @@ a:hover {
   }
   .nav .middle {
     display: none;
+  }
+  .nav .left {
+    width: 50%;
   }
   
 }
