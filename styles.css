@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 
@@ -162,11 +163,12 @@ a:hover {
 
 .footer {
   margin-top: 100px;
-  height: 250px;
+  min-height: 250px;
   width: 100%;
   display: flex;
   background: rgb(240, 240, 240);
   padding: 10px;
+  flex-wrap: wrap;
 }
 
 .footer .author {
@@ -192,8 +194,8 @@ a:hover {
 }
 
 .social-links {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .e {
@@ -233,7 +235,18 @@ a:hover {
 }
 
 @media screen and (max-width: 650px){
-  .no-mobile {
-    display: flex;
+  body {
+    overflow-x: hidden;
   }
+  .about-me {
+    flex-direction: column;
+    height: auto;
+  }
+  .about-me img {
+    max-height: 100px;
+  }
+  .nav .middle {
+    display: none;
+  }
+  
 }
