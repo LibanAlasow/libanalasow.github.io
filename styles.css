@@ -97,6 +97,19 @@ a:hover {
   flex-direction: column;
   margin: 10px auto;
   text-align: center;
+  background: url(https://wallpaperaccess.com/full/84248.png);
+  background-size: 100%;
+  color: white;
+  background-position: bottom;
+  border-radius: 10px;
+}
+
+.ee a {
+  color: white;
+}
+
+.ee a:hover {
+  border-bottom-color: white;
 }
 
 .sd {
@@ -117,7 +130,8 @@ a:hover {
 }
 
 .greet p {
-  color: rgb(76, 76, 76);
+  color: white;
+  font-weight: bold;
   width: 500px;
 }
 
@@ -368,6 +382,16 @@ a:hover {
   }
   .nav .left {
     width: 50%;
+  }
+  .greet {
+    color: black;
+    background: none;
+  }
+  .greet p {
+    color: rgb(55, 55, 55);
+  }
+  .greet a {
+    color: black;
   }
   
 }
