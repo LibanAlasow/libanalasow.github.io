@@ -316,6 +316,8 @@ a:hover {
   color: rgb(83, 83, 83);
   font-size: 15px;
   line-height: 17px;
+  padding-right: 35px;
+  overflow: scroll;
 }
 
 .cool-people .bottom {
