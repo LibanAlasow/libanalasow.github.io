@@ -66,7 +66,21 @@ body {
 }
 
 .discord {
-  color: blue;
+  color: white;
+  min-width: 100px;
+  height: 30px;
+  background: blue;
+  padding: 4px;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.discord:hover {
+  border: none;
 }
 
 .github {
@@ -383,6 +397,11 @@ a:hover {
 @media screen and (max-width: 650px){
   body {
     overflow-x: hidden;
+  }
+  .discord {
+    color: blue;
+    background: none;
+    box-sizing: border-box;
   }
   .about-me {
     flex-direction: column;
