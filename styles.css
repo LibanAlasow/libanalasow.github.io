@@ -10,6 +10,50 @@ body {
 
 
 
+
+
+
+
+
+.article {
+  height: 1200px;
+  width: 1000px;
+  margin: 15px auto;
+  background: white;
+  padding-right: 300px;
+  padding-left: 70px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+
+.article p {
+  font-weight: bold;
+  margin-top: 35px;
+}
+
+.article .desc {
+  display: block;
+  margin-bottom: 100px;
+  font-size: 15px;
+  color: rgb(50, 50, 50);
+}
+
+
+
+.front {
+  background: url(https://media1.thehungryjpeg.com/thumbs2/ori_3755222_h3kfjebuh5eux3hi7solszunvz788mq4q6ayb69k_black-hexagon-backgrounds.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  margin-top: -10px;
+}
+
+
+
+
+
+
 .nav {
   width: 90%;
   height: 60px;
@@ -17,7 +61,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  
+  color: white;
 }
 
 
@@ -65,7 +109,7 @@ body {
 .nav .middle a {
   margin: 15px;
   text-decoration: none;
-  color: black;
+  color: white;
   cursor: pointer;
   font-size: 12px;
 }
@@ -104,10 +148,11 @@ body {
   border-style: solid;
   color: blue;
   background: none;
+  border-bottom-color: blue;
 }
 
 .github {
-  color: black;
+  color: white;
 }
 
 div {
@@ -122,21 +167,18 @@ div {
 
 
 a:hover {
-  border-bottom: solid black 2px;
+  border-bottom: solid white 2px;
 }
 
 .greet {
   width: 100%;
-  height: calc(100vh - 210px);
+  height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 10px auto;
   text-align: center;
-  background: url(https://wallpapersmug.com/large/fcf931/keyboard-dark-red-glow.jpg);
-  background-position: bottom;
-  background-size: 100%;
   color: white;
 }
 
@@ -209,6 +251,7 @@ a:hover {
   height: 250px;
   margin: 0 auto;
   margin-bottom: 10px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   background: rgb(255, 78, 78);
@@ -508,17 +551,6 @@ a:hover {
   }
   .nav .left {
     width: 50%;
-  }
-  .greet {
-    color: black;
-    background: none;
-  }
-  .greet p {
-    color: rgb(55, 55, 55);
-  }
-  .greet a {
-    color: black;
-  }
   
 }
 
