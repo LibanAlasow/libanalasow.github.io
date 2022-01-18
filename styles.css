@@ -16,14 +16,14 @@ body {
 
 
 .article {
-  height: 1200px;
+  min-height: 1200px;
   width: 1000px;
   margin: 15px auto;
   background: white;
   padding-right: 300px;
   padding-left: 70px;
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
 }
 
 
@@ -42,7 +42,7 @@ body {
 
 
 .front {
-  background: url(https://img1.goodfon.com/wallpaper/nbig/4/6d/abstrakciya-minimalizm-fon-6148.jpg);
+  background: url(https://sapiensnetwork.eu/wp-content/uploads/2021/01/gradient-background-02.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -245,32 +245,6 @@ a:hover {
   left: 0;
 }
 
-
-
-.about-me {
-  width: 90%;
-  height: 250px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  background: rgb(255, 78, 78);
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-}
-
-.about-me img {
-  max-height: 90%;
-  margin: 10px;
-}
-
-.about-me p {
-  max-width: 700px;
-  
-  color: white;
-}
 
 .footer {
   margin-top: 100px;
@@ -532,6 +506,49 @@ a:hover {
   margin-bottom: 35px;
 }
 
+
+
+
+
+
+
+
+.article .small {
+  font-size: 12px;
+}
+
+.article .big {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.article .medium {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.article .text {
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.article a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.article a:hover {
+    border-bottom: black 1px solid;
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 850px){
   body {
     overflow-x: hidden;
@@ -553,7 +570,17 @@ a:hover {
   }
   .nav .left {
     width: 50%;
-  
+  }
+  .article {
+    min-height: 1200px;
+    width: 100%;
+    margin: 15px auto;
+    background: white;
+    padding: 60px;
+    margin-bottom: 100px;
+  }
+
+ 
 }
 
 
