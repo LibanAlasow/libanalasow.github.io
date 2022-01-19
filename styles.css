@@ -675,6 +675,11 @@ a:hover {
     min-width: 0;
   }
 
+
+
+  .greet p{
+    width: 90vw;
+  }
  
 }
 
