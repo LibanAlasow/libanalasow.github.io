@@ -680,6 +680,10 @@ a:hover {
   .greet p{
     width: 90vw;
   }
+
+  body {
+    overflow-x: hidden;
+  }
  
 }
 
