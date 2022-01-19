@@ -15,6 +15,83 @@ body {
 
 
 
+
+.news {
+  width: 90%;
+  min-height: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  border-top: solid 1px lightgray;
+  padding-left: 100px;
+}
+
+.news div {
+  border: solidd red;
+}
+
+.new {
+  width: 100%;
+  min-height: 350px;
+}
+
+.new .top {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.new .bottom {
+  height: 80%;
+}
+
+.new .textbox {
+  min-width: 550px;
+  min-height: 250px;
+  margin: 10px;
+  padding: 20px;
+  padding-right: 55px;
+  border: rgb(164, 164, 164) solid 1px;
+  border-radius: 10px;
+}
+
+.new .images {
+  min-width: 750px;
+  min-height: 250px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.new .images .img {
+  width: 250px; height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+
+.textbox p {
+  width: 700px;
+}
+
+
+
+
+.new .pfp {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 7.5px;
+}
+
+
+
+
+
+
+
 .article {
   min-height: 1200px;
   width: 1000px;
@@ -576,6 +653,26 @@ a:hover {
     background: white;
     padding: 60px;
     margin-bottom: 100px;
+  }
+
+  .news {
+    width: 92.5%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .news .bottom .textbox p {
+    width: 100%;
+  }
+  .news .bottom {
+    width: 100%;
+  }
+  .news .textbox {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .news .textbox .images {
+    width: 100%;
+    min-width: 0;
   }
 
  
