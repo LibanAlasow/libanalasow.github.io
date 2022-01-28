@@ -64,7 +64,7 @@ body {
 }
 
 .new .images .img {
-  width: 250px; height: 250px;
+  width: 200px; height: 200px;
   background-size: cover;
   background-position: center;
   border-radius: 6px;
@@ -119,11 +119,12 @@ body {
 
 
 .front {
-  background: url(https://www.teahub.io/photos/full/96-960344_material-design-hd-desktop-wallpaper-triangle.jpg);
+  background: url(https://cdn.wallpapersafari.com/74/49/F7dPYn.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
   margin-top: -10px;
+  padding: 15px;
 }
 
 
@@ -132,7 +133,7 @@ body {
 
 
 .nav {
-  width: 90%;
+  width: 80%;
   height: 60px;
   margin: 10px auto;
   display: flex;
@@ -172,7 +173,8 @@ body {
 }
 
 .nav .left img {
-  max-height: 100%;
+  max-height: 70%;
+  border-radius: 50%;
   margin: 10px;
 }
 
@@ -363,7 +365,7 @@ a:hover {
   min-height: 250px;
   margin: 10px auto;
   margin-top: 100px;
-  background: rgb(255, 125, 125);
+  background: rgb(125, 155, 255);
   overflow: hidden;
 }
 
@@ -616,7 +618,7 @@ a:hover {
 
 .thumbnail {
   max-height: 90px;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 
@@ -673,6 +675,9 @@ a:hover {
   .news .textbox .images {
     width: 100%;
     min-width: 0;
+  }
+  .nav {
+    width: 100%;
   }
 
 
