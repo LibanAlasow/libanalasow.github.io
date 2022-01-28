@@ -422,7 +422,7 @@ a:hover {
   box-sizing: border-box;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 28px 100px 0px;
+  border: solid 1px rgb(195, 195, 255);
   margin: 20px;
 }
 
@@ -458,7 +458,7 @@ a:hover {
   background: rgb(245, 245, 245);
   margin: 10px auto;
   border-radius: 6px;
-  border-left: 2.5px rgb(255, 108, 108) solid;
+  border-left: 2.5px rgb(118, 108, 255) solid;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding: 10px;
