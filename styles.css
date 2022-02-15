@@ -11,7 +11,6 @@ body {
 
 
 
-e
 
 
 
@@ -313,8 +312,10 @@ a:hover {
   min-height: 250px;
   width: 100%;
   display: flex;
-  background: rgb(240, 240, 240);
+  margin-top: 0; 
+  background: rgb(125, 155, 255));
   padding: 10px;
+  padding-top: 100px;
   flex-wrap: wrap;
 }
 
@@ -365,7 +366,8 @@ a:hover {
   min-height: 250px;
   margin: 10px auto;
   margin-top: 100px;
-  background: rgb(125, 155, 255);
+  margin-bottom: 0;
+  background: rgb(61, 106, 255);
   overflow: hidden;
 }
 

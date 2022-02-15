@@ -41,4 +41,5 @@ function timeSince(date) {
 }
 
 
-document.querySelector(".stamp").innerHTML = timeSince(new Date(1642606033951)) + ' ago'
+
+document.querySelector(".stamp").innerHTML = timeSince(new Date(1644936219392)) + ' ago'
