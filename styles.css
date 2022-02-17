@@ -11,7 +11,13 @@ body {
 
 
 
-
+.read-more {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
 
 
 
@@ -128,6 +134,37 @@ body {
 
 
 
+
+.newsbanner {
+  width: 90%;
+  height: 350px;
+  margin: 15px auto;
+  border-radius: 10px;
+  color: white;
+  padding: 30px;
+  padding-top: 40px;
+}
+
+.background-div {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  height: 300px;
+  width: 90%;
+  background-image: url(refx.png);
+  background-size: cover;
+  background-position: center;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+
+.newsbanner-inner {
+  filter: blur(0px);
+  position: relative;
+  top: -100%;
+  width: 90%;
+  margin: 15px auto;
+  padding-left: 20px;
+}
 
 
 
@@ -633,6 +670,15 @@ a:hover {
   body {
     overflow-x: hidden;
   }
+
+  .page-title {
+    display: none;
+  }
+
+  .newsbanner {
+    display: none;
+  }
+
 
   .about-me {
     flex-direction: column;
